@@ -17,7 +17,7 @@ a {
   display: flex;
   gap: 10px;
 }
-.content {
+.content h1 {
   font-size: 1.7rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
