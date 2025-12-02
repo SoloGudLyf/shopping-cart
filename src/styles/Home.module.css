@@ -14,7 +14,6 @@
 }
 
 a {
-  color: rgba(255, 255, 255, 0.781);
   text-decoration: underline;
   font-weight: bold;
 }
@@ -29,27 +28,63 @@ a:hover {
   gap: 15px;
 }
 
-.headline  {
+.headline {
   text-align: center;
 }
 
-.headline p{
+.headline p {
   font-size: 1.8rem;
   font-weight: bold;
 }
 
-.headline a{
+.headline a {
   text-decoration: none;
 }
 
-.imageCarousel{
+.imageCarousel {
   margin-top: 50px;
 }
 
-.imageCarousel p{
-  margin-left: 20px;
+.imageCarousel p {
   font-weight: bold;
   font-size: 1.2rem;
+  color: black;
+  text-align: center;
+  background-color: rgba(211, 211, 211, 0.534);
+}
+
+.info {
+  display: flex;
+  margin: 20px 30px 10px 30px;
+  justify-content: space-between;
+}
+
+.features,
+.testimonial {
+  background-color: rgb(211, 211, 211);
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  width: 70ch;
+}
+.testimonial {
+}
+
+.topic {
+  font-weight: bold;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+}
+
+button a {
+  color: white;
+}
+
+button a:active {
+  color: #646cff;
 }
 
 .content h1 {

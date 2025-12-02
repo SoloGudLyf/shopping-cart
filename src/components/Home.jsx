@@ -32,52 +32,51 @@ export function Homepage() {
           <ImageCarousel
             imagesArr={[
               {
-                src: "src/components/image-carousel/image-carousel/images/cli-webpack.png",
+                src: "src/components/image-carousel/image-carousel/images/rebar.png",
                 alt: "Screenshot",
               },
               {
-                src: "src/components/image-carousel/image-carousel/images/Screenshot_2025-10-13_13-02-48.png",
+                src: "src/components/image-carousel/image-carousel/images/timber.png",
                 alt: "Screenshot",
               },
               {
-                src: "src/components/image-carousel/image-carousel/images/Screenshot_2025-11-26_01-28-21.png",
+                src: "src/components/image-carousel/image-carousel/images/masonry.png",
                 alt: "Screenshot",
               },
               {
-                src: "src/components/image-carousel/image-carousel/images/vscode-webpack.png",
+                src: "src/components/image-carousel/image-carousel/images/roofing.png",
                 alt: "screenshot",
               },
             ]}
           />
         </section>
-        <section className="container">
-          <div className="features">
+        <section className={styles.info}>
+          <div className={styles.features}>
             <h2>Why Choose Us?</h2>
-            <p>features&Trust</p>
             <p>
-              <span className="topic">Quality Assured:</span> Materials sourced
+              <span className={styles.topic}>Quality Assured:</span> Materials sourced
               from certified, top-tier suppliers
             </p>
             <p>
-              <span className="topic">Reliable Delivery:</span> On-time delivery
+              <span className={styles.topic}>Reliable Delivery:</span> On-time delivery
               directly to your job site or home.
             </p>
             <p>
-              <span className="topic">Expert Support:</span> Get technical
+              <span className={styles.topic}>Expert Support:</span> Get technical
               advice from our experienced team
             </p>
             <p>
-              <span className="topic">Competitive Pricing:</span> Bulk discounts
+              <span className={styles.topic}>Competitive Pricing:</span> Bulk discounts
               and transparent pricing for every project.
             </p>{" "}
           </div>
-          <div className="testimonial">
+          <div className={styles.testimonial}>
             <h2>Testimonials</h2>
             <p>
               "The bulk order of rebar was delivered exactly on schedule, and
               the quality was perfect for our foundation pour. A reliable
               partner for our large projects."{" "}
-              <span className="clientName">- John D., Site Manager</span>
+              <span className={styles.clientName}>- John D., Site Manager</span>
             </p>
           </div>
         </section>

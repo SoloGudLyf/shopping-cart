@@ -9,12 +9,12 @@ img {
 
 .pictureFrame {
   border-radius: 5px;
-  border: black 2px solid;
+  border: lightgray 3px solid;
 }
 
 .pictureFrame img {
-  width: 500px;
-  height: 300px;
+  width: 1000px;
+  height: 400px;
 }
 
 .pictureFrame button {
@@ -36,7 +36,7 @@ img {
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 30px solid green;
+  border-right: 30px solid #444efc;
 }
 
 .triangleRight {
@@ -44,7 +44,7 @@ img {
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 30px solid purple;
+  border-left: 30px solid #434dfd;
 }
 
 .inactive {
