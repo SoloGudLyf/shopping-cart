@@ -1,24 +1,38 @@
 .container {
   display: flex;
   flex-direction: column;
+  gap: 100px;
 }
 
 .navBar {
   display: flex;
   justify-content: space-between;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+
 }
 
 a {
-  color: white;
+  color: rgba(255, 255, 255, 0.781);
   text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .navBar span:last-child {
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
+
 .content h1 {
-  font-size: 1.7rem;
+  font-size: 5rem;
+  text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
@@ -66,6 +80,6 @@ a {
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
-      0 4px 0 #cccccc, 0 4px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+      0 1px 0 #cccccc, 0 4px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
   }
 }

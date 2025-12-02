@@ -14,7 +14,20 @@ export function Homepage() {
         </span>
       </div>
       <div className={styles.content}>
-        <h1>Welcome to my shopping page</h1>
+        <section className="headline">
+          <h1>BUILD SMARTER. BUILD STRONGER.</h1>
+          <p>
+            Your trusted source for high-quality steel, timber, cement, and
+            construction essentials.
+          </p>
+          <button>
+            <Link>Shop All Materials</Link>
+          </button>
+        </section>
+        <p>
+          Explore Our Core Materials like Steel & Rebar, Lumber & Timber,
+          Foundation & Masonry and Roofing & Insulation{" "}
+        </p>
         <ImageCarousel
           imagesArr={[
             {
@@ -35,6 +48,37 @@ export function Homepage() {
             },
           ]}
         />
+        <section className="container">
+          <div className="features">
+            <h2>Why Choose Us?</h2>
+            <p>features&Trust</p>
+            <p>
+              <span className="topic">Quality Assured:</span> Materials sourced
+              from certified, top-tier suppliers
+            </p>
+            <p>
+              <span className="topic">Reliable Delivery:</span> On-time delivery
+              directly to your job site or home.
+            </p>
+            <p>
+              <span className="topic">Expert Support:</span> Get technical
+              advice from our experienced team
+            </p>
+            <p>
+              <span className="topic">Competitive Pricing:</span> Bulk discounts
+              and transparent pricing for every project.
+            </p>{" "}
+          </div>
+          <div className="testimonial">
+            <h2>Testimonials</h2>
+            <p>
+              "The bulk order of rebar was delivered exactly on schedule, and
+              the quality was perfect for our foundation pour. A reliable
+              partner for our large projects."{" "}
+              <span className="clientName">- John D., Site Manager</span>
+            </p>
+          </div>
+        </section>
       </div>
       <div className={styles.footer}></div>
     </div>
