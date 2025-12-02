@@ -14,7 +14,7 @@ export function Homepage() {
         </span>
       </div>
       <div className={styles.content}>
-        <section className="headline">
+        <section className={styles.headline}>
           <h1>BUILD SMARTER. BUILD STRONGER.</h1>
           <p>
             Your trusted source for high-quality steel, timber, cement, and
@@ -24,30 +24,32 @@ export function Homepage() {
             <Link>Shop All Materials</Link>
           </button>
         </section>
-        <p>
-          Explore Our Core Materials like Steel & Rebar, Lumber & Timber,
-          Foundation & Masonry and Roofing & Insulation{" "}
-        </p>
-        <ImageCarousel
-          imagesArr={[
-            {
-              src: "src/components/image-carousel/image-carousel/images/cli-webpack.png",
-              alt: "Screenshot",
-            },
-            {
-              src: "src/components/image-carousel/image-carousel/images/Screenshot_2025-10-13_13-02-48.png",
-              alt: "Screenshot",
-            },
-            {
-              src: "src/components/image-carousel/image-carousel/images/Screenshot_2025-11-26_01-28-21.png",
-              alt: "Screenshot",
-            },
-            {
-              src: "src/components/image-carousel/image-carousel/images/vscode-webpack.png",
-              alt: "screenshot",
-            },
-          ]}
-        />
+        <section className={styles.imageCarousel}>
+          <p>
+            Explore Our Core Materials like Steel & Rebar, Lumber & Timber,
+            Foundation & Masonry and Roofing & Insulation{" "}
+          </p>
+          <ImageCarousel
+            imagesArr={[
+              {
+                src: "src/components/image-carousel/image-carousel/images/cli-webpack.png",
+                alt: "Screenshot",
+              },
+              {
+                src: "src/components/image-carousel/image-carousel/images/Screenshot_2025-10-13_13-02-48.png",
+                alt: "Screenshot",
+              },
+              {
+                src: "src/components/image-carousel/image-carousel/images/Screenshot_2025-11-26_01-28-21.png",
+                alt: "Screenshot",
+              },
+              {
+                src: "src/components/image-carousel/image-carousel/images/vscode-webpack.png",
+                alt: "screenshot",
+              },
+            ]}
+          />
+        </section>
         <section className="container">
           <div className="features">
             <h2>Why Choose Us?</h2>

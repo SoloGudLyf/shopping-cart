@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 20px;
 }
 
 .navBar {
@@ -11,7 +11,6 @@
   margin-left: 20px;
   font-size: 1.3rem;
   font-weight: bold;
-
 }
 
 a {
@@ -30,7 +29,33 @@ a:hover {
   gap: 15px;
 }
 
+.headline  {
+  text-align: center;
+}
+
+.headline p{
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.headline a{
+  text-decoration: none;
+}
+
+.imageCarousel{
+  margin-top: 50px;
+}
+
+.imageCarousel p{
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 .content h1 {
+  margin: 0;
+  position: relative;
+  top: 50px;
   font-size: 5rem;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
