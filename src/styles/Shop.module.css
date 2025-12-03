@@ -5,6 +5,7 @@
   width: 100vw;
   background-color: #f4f5f7;
   color: black;
+  overflow-x: hidden;
 }
 
 .container h1 {
@@ -57,10 +58,29 @@
   color: white;
   font-weight: bold;
   font-size: 1.2rem;
+  user-select: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.items label div:hover {
+  background-color: #e05c00;
 }
 
 .items label {
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
+}
+
+.cartSize {
+  color: #e05c00;
+  text-decoration: underline white;
+  font-size: 80%;
+  margin-right: 50px;
+  position: relative;
+  bottom: 30px;
+  left: 45px;
 }
