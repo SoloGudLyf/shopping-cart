@@ -46,7 +46,11 @@ export function ImageCarousel({ imagesArr }) {
     <div className={styles.container}>
       <div>
         <div className={styles.display}>
-          <div className={styles.triangleLeft} onClick={moveBack}></div>
+          <div
+            className={styles.triangleLeft}
+            onClick={moveBack}
+            role="back-button"
+          ></div>
           <div className={styles.pictureFrame}>
             {imagesArr.map((image, index) => (
               <img
@@ -59,7 +63,11 @@ export function ImageCarousel({ imagesArr }) {
               />
             ))}
           </div>
-          <div className={styles.triangleRight} onClick={moveForward}></div>
+          <div
+            className={styles.triangleRight}
+            onClick={moveForward}
+            role="forward-button"
+          ></div>
         </div>
         <div className={styles.imageNav}>
           {imagesArr.map((element, index) => {
@@ -68,7 +76,7 @@ export function ImageCarousel({ imagesArr }) {
                 key={index}
                 type="radio"
                 id={index}
-                name="image"
+                name={index}
                 checked={index == currIndex}
                 onChange={() => setCurrIndex(index)}
               />
