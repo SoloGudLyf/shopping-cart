@@ -42,3 +42,25 @@
 .container button:hover {
   background-color: #e05c00;
 }
+
+.items input {
+  width: 60px;
+  height: 20px;
+  text-align: center;
+}
+
+.items label div {
+  background-color: #ff6600;
+  width: 25px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.items label {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}

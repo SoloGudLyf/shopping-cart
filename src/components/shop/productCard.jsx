@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "/home/gud-lyf/repos/shopping-cart/src/styles/Shop.module.css";
 
-export default function ProductCard({ item }) {
+export default function ProductCard({ item,id }) {
   const [itemSize, setItemSize] = useState(1);
 
   return (
@@ -18,24 +18,24 @@ export default function ProductCard({ item }) {
           <span className={styles.topic}>Bulk Price:</span>
           {item.bulkPriceDesc || item.bulkPrice}
         </p>
-        <form action="#">
-          <label htmlFor="itemSize">
-            No. of Items:{" "}
-            <input
-              type="number"
-              value={itemSize}
-              onChange={(e) => setItemSize(Number(e.target.value))}
-              id="itemSize"
-            />
-            <button onClick={() => setItemSize(itemSize + 1)}>+</button>
-            <button onClick={() => itemSize !== 0 && setItemSize(itemSize - 1)}>
-              -
-            </button>
-          </label>
+          <form action="#">
+              <label htmlFor={id}>
+                No. of Items:{" "}
+                <input
+                  type="number"
+                  value={itemSize}
+                  onChange={(e) => setItemSize(Number(e.target.value))}
+                  id={id}
+                />
+                <div onClick={() => setItemSize(itemSize + 1)}>+</div>
+                <div onClick={() => itemSize !== 0 && setItemSize(itemSize - 1)}>
+                  -
+                </div>
+              </label>
+          </form>
           <div>
             <button>Add To Cart</button>
           </div>
-        </form>
       </div>
     </>
   );

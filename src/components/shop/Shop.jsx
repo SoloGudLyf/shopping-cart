@@ -18,7 +18,7 @@ export default function Shop() {
       <h1>Shopping Page</h1>
       <section className={styles.items}>
         {products.map((item, index) => (
-          <ProductCard key={index} item={item} />
+          <ProductCard key={index} item={item} id={index}/>
         ))}
       </section>
     </div>
