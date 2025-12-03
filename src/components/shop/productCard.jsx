@@ -1,8 +1,13 @@
 import { useState } from "react";
 import styles from "/home/gud-lyf/repos/shopping-cart/src/styles/Shop.module.css";
 
-export default function ProductCard({ item,id }) {
+export default function ProductCard({ item, id, updateCart }) {
   const [itemSize, setItemSize] = useState(1);
+
+  function setCart() {
+    const currItem = { name: item.name, quantity: itemSize, price: item.price };
+    updateCart(currItem);
+  }
 
   return (
     <>
@@ -18,24 +23,24 @@ export default function ProductCard({ item,id }) {
           <span className={styles.topic}>Bulk Price:</span>
           {item.bulkPriceDesc || item.bulkPrice}
         </p>
-          <form action="#">
-              <label htmlFor={id}>
-                No. of Items:{" "}
-                <input
-                  type="number"
-                  value={itemSize}
-                  onChange={(e) => setItemSize(Number(e.target.value))}
-                  id={id}
-                />
-                <div onClick={() => setItemSize(itemSize + 1)}>+</div>
-                <div onClick={() => itemSize !== 0 && setItemSize(itemSize - 1)}>
-                  -
-                </div>
-              </label>
-          </form>
-          <div>
-            <button>Add To Cart</button>
-          </div>
+        <form action="#">
+          <label htmlFor={id}>
+            No. of Items:{" "}
+            <input
+              type="number"
+              value={itemSize}
+              onChange={(e) => setItemSize(Number(e.target.value))}
+              id={id}
+            />
+            <div onClick={() => setItemSize(itemSize + 1)}>+</div>
+            <div onClick={() => itemSize !== 0 && setItemSize(itemSize - 1)}>
+              -
+            </div>
+          </label>
+        </form>
+        <div>
+          <button onClick={() => setCart()}>Add To Cart</button>
+        </div>
       </div>
     </>
   );
