@@ -33,19 +33,19 @@ export function Homepage() {
             imagesArr={[
               {
                 src: "src/components/image-carousel/image-carousel/images/rebar.png",
-                alt: "Screenshot",
+                alt: "Rebar",
               },
               {
                 src: "src/components/image-carousel/image-carousel/images/timber.png",
-                alt: "Screenshot",
+                alt: "timber",
               },
               {
                 src: "src/components/image-carousel/image-carousel/images/masonry.png",
-                alt: "Screenshot",
+                alt: "masonry",
               },
               {
                 src: "src/components/image-carousel/image-carousel/images/roofing.png",
-                alt: "screenshot",
+                alt: "roofing-materials",
               },
             ]}
           />
@@ -54,20 +54,20 @@ export function Homepage() {
           <div className={styles.features}>
             <h2>Why Choose Us?</h2>
             <p>
-              <span className={styles.topic}>Quality Assured:</span> Materials sourced
-              from certified, top-tier suppliers
+              <span className={styles.topic}>Quality Assured:</span> Materials
+              sourced from certified, top-tier suppliers
             </p>
             <p>
-              <span className={styles.topic}>Reliable Delivery:</span> On-time delivery
-              directly to your job site or home.
+              <span className={styles.topic}>Reliable Delivery:</span> On-time
+              delivery directly to your job site or home.
             </p>
             <p>
-              <span className={styles.topic}>Expert Support:</span> Get technical
-              advice from our experienced team
+              <span className={styles.topic}>Expert Support:</span> Get
+              technical advice from our experienced team
             </p>
             <p>
-              <span className={styles.topic}>Competitive Pricing:</span> Bulk discounts
-              and transparent pricing for every project.
+              <span className={styles.topic}>Competitive Pricing:</span> Bulk
+              discounts and transparent pricing for every project.
             </p>{" "}
           </div>
           <div className={styles.testimonial}>
