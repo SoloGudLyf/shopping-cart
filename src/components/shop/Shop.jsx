@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 
 export default function Shop() {
   const [cart, setCart] = useState([]);
-
   function updateCart(obj) {
     setCart([...cart, obj]);
   }
@@ -23,7 +22,14 @@ export default function Shop() {
         <span>
           <Link to="/">Home</Link>
           <Link to="shop">Shop</Link>
-          <Link>Cart</Link>
+          <Link>
+            Cart{" "}
+            <span className={styles.cartSize}>
+              {cart
+                .map((item) => item.quantity)
+                .reduce((acc, curr) => acc + curr, 0)}
+            </span>
+          </Link>
         </span>
       </div>
       <h1>Shopping Page</h1>
