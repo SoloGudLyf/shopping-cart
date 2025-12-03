@@ -51,7 +51,7 @@ export function ImageCarousel({ imagesArr }) {
             onClick={moveBack}
             role="back-button"
           ></div>
-          <div className={styles.pictureFrame}>
+          <div className={styles.pictureFrame} role="picture-frame">
             {imagesArr.map((image, index) => (
               <img
                 key={index}
@@ -73,6 +73,7 @@ export function ImageCarousel({ imagesArr }) {
           {imagesArr.map((element, index) => {
             return (
               <input
+                data-testid={index}
                 key={index}
                 type="radio"
                 id={index}
