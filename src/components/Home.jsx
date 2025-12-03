@@ -5,14 +5,14 @@ import { ImageCarousel } from "./image-carousel/image-carousel/ImageCarousel";
 export function Homepage() {
   return (
     <div className={styles.container}>
-      <div className={styles.navBar}>
+      <section className={styles.navBar}>
         <span>Logo</span>
         <span>
           <Link to="/">Home</Link>
           <Link to="shop">Shop</Link>
           <Link>Cart</Link>
         </span>
-      </div>
+      </section>
       <div className={styles.content}>
         <section className={styles.headline}>
           <h1>BUILD SMARTER. BUILD STRONGER.</h1>
