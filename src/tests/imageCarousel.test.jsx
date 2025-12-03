@@ -29,7 +29,7 @@ describe("renders image carousel", () => {
     expect(screen.getAllByRole("img").length).toBe(4);
   });
 
-  it("false to be false", () => {
+  it("includes back button", () => {
     render(
       <ImageCarousel
         imagesArr={[
@@ -52,6 +52,57 @@ describe("renders image carousel", () => {
         ]}
       />
     );
-    expect(false).toBe(false);
+    expect(screen.getByRole("back-button")).toBeInTheDocument();
+  });
+  it("includes forward button", () => {
+    render(
+      <ImageCarousel
+        imagesArr={[
+          {
+            src: "src/components/image-carousel/image-carousel/images/rebar.png",
+            alt: "Screenshot",
+          },
+          {
+            src: "src/components/image-carousel/image-carousel/images/timber.png",
+            alt: "Screenshot",
+          },
+          {
+            src: "src/components/image-carousel/image-carousel/images/masonry.png",
+            alt: "Screenshot",
+          },
+          {
+            src: "src/components/image-carousel/image-carousel/images/roofing.png",
+            alt: "screenshot",
+          },
+        ]}
+      />
+    );
+    expect(screen.getByRole("forward-button")).toBeInTheDocument();
+  });
+
+  it("includes back button", () => {
+    render(
+      <ImageCarousel
+        imagesArr={[
+          {
+            src: "src/components/image-carousel/image-carousel/images/rebar.png",
+            alt: "Screenshot",
+          },
+          {
+            src: "src/components/image-carousel/image-carousel/images/timber.png",
+            alt: "Screenshot",
+          },
+          {
+            src: "src/components/image-carousel/image-carousel/images/masonry.png",
+            alt: "Screenshot",
+          },
+          {
+            src: "src/components/image-carousel/image-carousel/images/roofing.png",
+            alt: "screenshot",
+          },
+        ]}
+      />
+    );
+    expect(screen.getAllByRole("radio").length).toBe(4);
   });
 });
