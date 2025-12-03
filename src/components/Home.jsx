@@ -9,7 +9,7 @@ export function Homepage() {
         <span>Logo</span>
         <span>
           <Link to="/">Home</Link>
-          <Link>Shop</Link>
+          <Link to="shop">Shop</Link>
           <Link>Cart</Link>
         </span>
       </div>
