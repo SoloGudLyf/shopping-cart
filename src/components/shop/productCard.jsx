@@ -11,35 +11,39 @@ export default function ProductCard({ item, id, updateCart }) {
 
   return (
     <>
-      <div>
-        <h2>{item.name}</h2>
-        <p>{item.description}</p>
-        <img src={item.imgSrc} alt={item.alt} />
-        <p>
-          <span className={styles.topic}>Price:</span>
-          {item.priceDesc || item.price}
-        </p>
-        <p>
-          <span className={styles.topic}>Bulk Price:</span>
-          {item.bulkPriceDesc || item.bulkPrice}
-        </p>
-        <form action="#">
-          <label htmlFor={id}>
-            No. of Items:{" "}
-            <input
-              type="number"
-              value={itemSize}
-              onChange={(e) => setItemSize(Number(e.target.value))}
-              id={id}
-            />
-            <div onClick={() => setItemSize(itemSize + 1)}>+</div>
-            <div onClick={() => itemSize !== 0 && setItemSize(itemSize - 1)}>
-              -
-            </div>
-          </label>
-        </form>
+      <div className={styles.card}>
         <div>
+          <h2>{item.name}</h2>
+          <p>{item.description}</p>
+          <img src={item.imgSrc} alt={item.alt} />
+        </div>
+        <div>
+          <p>
+            <span className={styles.topic}>Price: </span>
+            {item.priceDesc || item.price}
+          </p>
+          <p>
+            <span className={styles.topic}>Bulk Price: </span>
+            {item.bulkPriceDesc || item.bulkPrice}
+          </p>
+          <form action="#">
+            <label htmlFor={id}>
+              No. of Items:{" "}
+              <input
+                type="number"
+                value={itemSize}
+                onChange={(e) => setItemSize(Number(e.target.value))}
+                id={id}
+              />
+              <div onClick={() => setItemSize(itemSize + 1)}>+</div>
+              <div onClick={() => itemSize !== 0 && setItemSize(itemSize - 1)}>
+                -
+              </div>
+            </label>
+          </form>
+        <div className={styles.buttonContainer}>
           <button onClick={() => setCart()}>Add To Cart</button>
+        </div>
         </div>
       </div>
     </>

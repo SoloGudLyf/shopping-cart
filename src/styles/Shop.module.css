@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: #f4f5f7;
+  background-color: #c6c7c749;
   color: black;
   overflow-x: hidden;
 }
@@ -31,9 +31,11 @@
   border-radius: 5px;
 }
 
-.items > div div {
+.buttonContainer{
   text-align: center;
 }
+
+
 
 .container button {
   color: white;
@@ -83,4 +85,18 @@
   position: relative;
   bottom: 30px;
   left: 45px;
+}
+
+.items p{
+  margin: 2px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card h2{
+  margin: 0;
 }
