@@ -1,8 +1,10 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import styles from "../styles/Home.module.css";
 import { ImageCarousel } from "./image-carousel/image-carousel/ImageCarousel";
 
 export function Homepage() {
+  const navigate = useNavigate()
+  
   return (
     <div className={styles.container}>
       <section className={styles.navBar}>
@@ -20,8 +22,8 @@ export function Homepage() {
             Your trusted source for high-quality steel, timber, cement, and
             construction essentials.
           </p>
-          <button>
-            <Link>Shop All Materials</Link>
+          <button onClick={()=> navigate('/shop')}>
+            Shop All Materials
           </button>
         </section>
         <section className={styles.imageCarousel}>
