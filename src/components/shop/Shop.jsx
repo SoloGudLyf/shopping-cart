@@ -12,7 +12,19 @@ export default function Shop() {
   }
 
   useEffect(() => {
-    console.log(cart);
+  
+    const condensed = Object.values(cart.reduce((acc, item) => {
+      if (!acc[item.name]) {
+        // If the item doesn't exist in our accumulator, add it
+        acc[item.name] = { ...item };
+      } else {
+        // If it does exist, just add the quantity
+        acc[item.name].quantity += item.quantity;
+      }
+      return acc;
+    }, {}));
+    
+    console.log(condensed);
   }, [cart]);
 
   return (
