@@ -96,6 +96,11 @@ a:hover {
   width: 20px;
 }
 
+.clientName{
+  display: flex;
+  justify-content: flex-end;
+}
+
 button {
   width: 200px;
   height: 50px;
