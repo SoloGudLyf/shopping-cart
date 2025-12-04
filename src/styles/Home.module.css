@@ -86,11 +86,14 @@ a:hover {
   border-radius: 5px;
   width: 70ch;
 }
-.testimonial {
-}
 
 .topic {
   font-weight: bold;
+}
+
+.container input {
+  transform: scale(1.1);
+  width: 20px;
 }
 
 button {
@@ -102,7 +105,7 @@ button {
 
 button:hover {
   box-shadow: 0 0 10px #cccccc;
-  transition: box-shadow .2s;
+  transition: box-shadow 0.2s;
 }
 
 button a:active {
