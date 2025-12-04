@@ -11,7 +11,7 @@ export default function ProductCard({ item, id, updateCart }) {
 
   return (
     <>
-      <div className={styles.card}>
+      <div className={styles.card} role="card">
         <div>
           <h2>{item.name}</h2>
           <p>{item.description}</p>
@@ -22,10 +22,13 @@ export default function ProductCard({ item, id, updateCart }) {
             <span className={styles.topic}>Price: </span>
             {item.priceDesc || item.price}
           </p>
-          <p>
-            <span className={styles.topic}>Bulk Price: </span>
-            {item.bulkPriceDesc || item.bulkPrice}
-          </p>
+          {(item.bulkPriceDesc || item.bulkPrice) && (
+            <p>
+              <span className={styles.topic}>Bulk Price: </span>
+              {item.bulkPriceDesc || item.bulkPrice}
+            </p>
+          )}
+
           <form action="#">
             <label htmlFor={id}>
               No. of Items:{" "}
@@ -41,9 +44,9 @@ export default function ProductCard({ item, id, updateCart }) {
               </div>
             </label>
           </form>
-        <div className={styles.buttonContainer}>
-          <button onClick={() => setCart()}>Add To Cart</button>
-        </div>
+          <div className={styles.buttonContainer}>
+            <button onClick={() => setCart()}>Add To Cart</button>
+          </div>
         </div>
       </div>
     </>

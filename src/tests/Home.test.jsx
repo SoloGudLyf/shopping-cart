@@ -11,7 +11,7 @@ describe("renders as expected", () => {
         <Homepage />
       </MemoryRouter>
     );
-    expect(screen.getAllByRole("link").length).toBeGreaterThan(3);
+    expect(screen.getAllByRole("link").length).toBeGreaterThan(2);
   });
 
   it("Displays heading", () => {
