@@ -33,8 +33,8 @@ export default function Shop() {
         <span>Logo</span>
         <span>
           <Link to="/">Home</Link>
-          <Link to="shop">Shop</Link>
-          <Link to="cart">
+          <Link to="/shop">Shop</Link>
+          <Link to="/cart">
             Cart{" "}
             <span className={styles.cartSize}>
               {cart

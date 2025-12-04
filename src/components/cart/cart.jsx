@@ -1,4 +1,4 @@
-
+import { Link } from "react-router"
 
 export function CartPage({inventory}){
     return  <div className="container">
@@ -35,7 +35,7 @@ Your Cart Summary  </caption>
   </tbody>
   <tfoot>
     <tr>
-      <th scope="row" colspan="3">Total Amount</th>
+      <th scope="row" colSpan="3">Total Amount</th>
       <td>23</td>
     </tr>
   </tfoot>
