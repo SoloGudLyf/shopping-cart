@@ -4,6 +4,7 @@ import "./index.css";
 import { Homepage } from "./components/Home";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Shop from "./components/shop/Shop";
+import { CartPage } from "./components/cart/cart";
 
 
 const router = createBrowserRouter([{
@@ -13,6 +14,10 @@ const router = createBrowserRouter([{
   {
     path: "shop",
     element: <Shop/>
+  },
+  {
+    path: "cart",
+    element: <CartPage/>
   }
 ])
 

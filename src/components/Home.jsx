@@ -12,7 +12,7 @@ export function Homepage() {
         <span>
           <Link to="/">Home</Link>
           <Link to="shop">Shop</Link>
-          <Link>Cart</Link>
+          <Link to="cart">Cart</Link>
         </span>
       </section>
       <div className={styles.content}>

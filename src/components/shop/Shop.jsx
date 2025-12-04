@@ -7,24 +7,24 @@ import { useEffect, useState } from "react";
 
 export default function Shop() {
   const [cart, setCart] = useState([]);
-  function updateCart(obj) {
-    setCart([...cart, obj]);
+  function updateCart(newItem) {
+    if(cart.length===0) return setCart([newItem])
+      let counter =0
+    const newCart = cart.map((item) => {
+      if (item.name === newItem.name) {
+        const Item = { ...item, quantity: item.quantity + newItem.quantity };        
+        return Item;
+      }
+      counter++
+      return item;
+    });
+
+    if(counter === cart.length) return setCart([...cart, newItem])
+    setCart(newCart);
   }
 
   useEffect(() => {
-  
-    const condensed = Object.values(cart.reduce((acc, item) => {
-      if (!acc[item.name]) {
-        // If the item doesn't exist in our accumulator, add it
-        acc[item.name] = { ...item };
-      } else {
-        // If it does exist, just add the quantity
-        acc[item.name].quantity += item.quantity;
-      }
-      return acc;
-    }, {}));
-    
-    console.log(condensed);
+    console.log(cart);
   }, [cart]);
 
   return (
@@ -34,7 +34,7 @@ export default function Shop() {
         <span>
           <Link to="/">Home</Link>
           <Link to="shop">Shop</Link>
-          <Link>
+          <Link to="cart">
             Cart{" "}
             <span className={styles.cartSize}>
               {cart
