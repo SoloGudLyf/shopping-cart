@@ -34,19 +34,19 @@ export function Homepage() {
           <ImageCarousel
             imagesArr={[
               {
-                src: "src/components/image-carousel/image-carousel/images/rebar.png",
+                src: "/src/components/image-carousel/image-carousel/images/rebar.png",
                 alt: "Rebar",
               },
               {
-                src: "src/components/image-carousel/image-carousel/images/timber.png",
+                src: "/src/components/image-carousel/image-carousel/images/timber.png",
                 alt: "timber",
               },
               {
-                src: "src/components/image-carousel/image-carousel/images/masonry.png",
+                src: "/src/components/image-carousel/image-carousel/images/masonry.png",
                 alt: "masonry",
               },
               {
-                src: "src/components/image-carousel/image-carousel/images/roofing.png",
+                src: "/src/components/image-carousel/image-carousel/images/roofing.png",
                 alt: "roofing-materials",
               },
             ]}
