@@ -1,6 +1,8 @@
 import { Link } from "react-router";
 import { useSharedState } from "../sharedCart";
 import styles from "/home/gud-lyf/repos/shopping-cart/src/styles/Cart.module.css";
+import homePageStyles from "/home/gud-lyf/repos/shopping-cart/src/styles/Home.module.css";
+import shopPageStyles from "/home/gud-lyf/repos/shopping-cart/src/styles/Shop.module.css";
 
 export function CartPage() {
   const { cart, setCart } = useSharedState();
@@ -31,12 +33,16 @@ export function CartPage() {
 
   return (
     <div className={styles.container}>
-      <section className="">
+      <section className={homePageStyles.navBar}>
         <span>Logo</span>
         <span>
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart">Cart  <span className={shopPageStyles.cartSize}>
+                        {cart
+                          .map((item) => item.quantity)
+                          .reduce((acc, curr) => acc + curr, 0)}
+                      </span></Link>
         </span>
       </section>
       <section>
@@ -58,7 +64,7 @@ export function CartPage() {
                 <tr key={index}>
                   <th scope="row">{item.name}</th>
                   <td>$ {item.price}</td>
-                  <td>
+                  <td className={styles.quantity}>
                     {item.quantity}{" "}
                     <div onClick={() => increaseQuantity(item)}>+</div>
                     <div onClick={() => decreaseQuantity(item)}>-</div>

@@ -4,12 +4,12 @@ import homePageStyles from "/home/gud-lyf/repos/shopping-cart/src/styles/Home.mo
 import { products } from "./products";
 import ProductCard from "./productCard";
 import { useEffect } from "react";
-import { CartPage } from "../cart/cart";
+import { CartPage } from "../cart/Cart";
 import { useSharedState } from "../sharedCart";
 
 export default function Shop() {
-  const {cart, setCart} = useSharedState();
-  
+  const { cart, setCart } = useSharedState();
+
   function updateCart(newItem) {
     if (cart.length === 0) return setCart([newItem]);
     let counter = 0;

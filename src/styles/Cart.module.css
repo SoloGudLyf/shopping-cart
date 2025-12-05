@@ -1,3 +1,70 @@
 .container {
   color: black;
 }
+
+h1 {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-size: 1.05rem;
+  margin: auto;
+}
+
+caption {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+table div {
+  background-color: #ff6600;
+  width: 25px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  user-select: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.quantity {
+  display: flex;
+  justify-content: space-evenly;
+  border: 0.5px solid rgba(0, 0, 0, 0.151);
+}
