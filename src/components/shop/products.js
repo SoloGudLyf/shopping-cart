@@ -1,15 +1,14 @@
-import rebarImg from "/src/assets/images/rebar.png"
-import timberStrudImg from "/src/assets/productImages/timberStrud.png"
-import hollowBlock from "/src/assets/productImages/hollowBlock.png"
-import insulationRollImg from "/src/assets/productImages/insulationRoll.png"
-import roofingImg from "/src/assets/images/roofing.png"
-
+import rebarImg from "/src/assets/images/rebar.webp";
+import timberStrudImg from "/src/assets/productImages/timberStrud.webp";
+import hollowBlock from "/src/assets/productImages/hollowBlock.webp";
+import insulationRollImg from "/src/assets/productImages/insulationRoll.webp";
+import roofingImg from "/src/assets/images/roofing.webp";
 
 export const products = [
   {
     name: `Rebar - Grade 60 (1/2" x 20')`,
     description: "Essential for reinforcing concrete in footings and slabs.",
-  
+
     imgSrc: rebarImg,
     imgAlt: "Rebar",
     price: 14.5,

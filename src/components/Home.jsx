@@ -1,18 +1,22 @@
 import { Link, useNavigate } from "react-router";
 import styles from "../styles/Home.module.css";
 import { ImageCarousel } from "./image-carousel/image-carousel/ImageCarousel";
-import rebarImg from "/src/assets/images/rebar.png";
-import masonryImg from "/src/assets/images/masonry.png";
-import roofingSheetImg from "/src/assets/images/roofing.png";
-import backgroundImg from "/src/assets/images/materials.png"
+import rebarImg from "/src/assets/images/rebar.webp";
+import masonryImg from "/src/assets/images/masonry.webp";
+import roofingSheetImg from "/src/assets/images/roofing.webp";
+import backgroundImg from "/src/assets/images/materials.webp";
+import timberImg from "/src/assets/images/timber.webp";
 
 export function Homepage() {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.container} style={{
-      '--background-url': `url("${backgroundImg}")`
-    }}>
+    <div
+      className={styles.container}
+      style={{
+        "--background-url": `url("${backgroundImg}")`,
+      }}
+    >
       <section className={styles.navBar}>
         <span>Logo</span>
         <span>
@@ -43,7 +47,7 @@ export function Homepage() {
                 alt: "Rebar",
               },
               {
-                src: "src/assets/images/timber.png",
+                src: timberImg,
                 alt: "timber",
               },
               {
