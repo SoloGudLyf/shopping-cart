@@ -20,7 +20,7 @@ export default function ProductCard({ item, id, updateCart }) {
         <div>
           <p>
             <span className={styles.topic}>Price: </span>
-            {item.priceDesc || item.price}
+            {item.priceDesc || "$ "+item.price}
           </p>
           {(item.bulkPriceDesc || item.bulkPrice) && (
             <p>

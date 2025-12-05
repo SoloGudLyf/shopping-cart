@@ -5,8 +5,6 @@ export const products = [
     imgSrc: "src/components/image-carousel/image-carousel/images/rebar.png",
     imgAlt: "Rebar",
     price: 14.5,
-    bulkPrice: 12.0,
-    bulkPriceDesc: "$12.00 / stick (Orders over 100)",
   },
   {
     name: `Standard 8x8x16 Hollow Concrete Block`,
@@ -14,8 +12,6 @@ export const products = [
     imgSrc: "src/components/shop/images/hollowBlock.png",
     imgAlt: "Rebar",
     price: 2.85,
-    bulkPrice: 240.0,
-    bulkPriceDesc: "$240.00 (90 units)",
   },
   {
     name: `2x4x8 Premium Kiln-Dried Studs`,
@@ -23,23 +19,23 @@ export const products = [
     imgSrc: "src/components/shop/images/timberStrud.png",
     imgAlt: "Rebar",
     price: 5.25,
-    priceDesc: "$5.25 / board",
+    priceDesc: "$ 5.25 / board",
   },
   {
     name: `R-30 Unfaced Fiberglass Insulation Roll`,
     description: "Covers 31.25 sq. ft. Ideal for attic floors.",
     imgSrc: "src/components/shop/images/insulationRoll.png",
     imgAlt: "Rebar",
-    price: 28.00,
-    priceDesc: "$28.00 / roll",
-  }, {
+    price: 28.0,
+    priceDesc: "$ 28.00 / roll",
+  },
+  {
     name: `12 ft. Corrugated Galvanized Steel Roof Panel`,
-    description: "29-gauge steel with zinc coating for superior corrosion resistance. Ideal for pole barns and industrial siding.",
+    description:
+      "29-gauge steel with zinc coating for superior corrosion resistance. Ideal for pole barns and industrial siding.",
     imgSrc: "src/components/shop/images/corrugatedRoofing.png",
     imgAlt: "Rebar",
-    price: 32.00,
-    priceDesc: "$32.00 / sheet",
-    bulkPrice: 28.50,
-    bulkPriceDesc: "$28.50 / sheet (Orders over 20)",
+    price: 32.0,
+    priceDesc: "$ 32.00 / sheet",
   },
 ];
