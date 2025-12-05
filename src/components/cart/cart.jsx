@@ -1,16 +1,42 @@
 import { Link } from "react-router";
 import { useSharedState } from "../sharedCart";
+import styles from "/home/gud-lyf/repos/shopping-cart/src/styles/Cart.module.css";
 
 export function CartPage() {
-const {cart,setCart} = useSharedState()
+  const { cart, setCart } = useSharedState();
+  console.log(cart);
+
+  function increaseQuantity(updatedItem) {
+    const updatedCart = cart.map((item) => {
+      if (item === updatedItem) {
+        return { ...item, quantity: item.quantity + 1 };
+      }
+      return item;
+    });
+    setCart(updatedCart);
+  }
+
+  function decreaseQuantity(updatedItem) {
+    let updatedCart = cart.map((item) => {
+      if (item === updatedItem && updatedItem.quantity !== 0) {
+        return { ...item, quantity: item.quantity - 1 };
+      }
+      return item;
+    });
+    updatedCart = updatedCart.filter((item) => item.quantity !== 0);
+    console.log(updatedCart);
+
+    setCart(updatedCart);
+  }
+
   return (
-    <div className="container">
+    <div className={styles.container}>
       <section className="">
         <span>Logo</span>
         <span>
           <Link to="/">Home</Link>
-          <Link to="shop">Shop</Link>
-          <Link to="/shop/cart">Cart</Link>
+          <Link to="/shop">Shop</Link>
+          <Link to="/cart">Cart</Link>
         </span>
       </section>
       <section>
@@ -26,13 +52,22 @@ const {cart,setCart} = useSharedState()
             </tr>
           </thead>
           <tbody>
-            {cart.map((item) => {
-              <tr>
-                <th scope="row">{item.name}</th>
-                <td>{item.price}</td>
-                <td>{item.quantity}</td>
-                <td>{item.price * item.quantity}</td>
-              </tr>;
+            {cart.map((item, index) => {
+              if (!item) return;
+              return (
+                <tr key={index}>
+                  <th scope="row">{item.name}</th>
+                  <td>$ {item.price}</td>
+                  <td>
+                    {item.quantity}{" "}
+                    <div onClick={() => increaseQuantity(item)}>+</div>
+                    <div onClick={() => decreaseQuantity(item)}>-</div>
+                  </td>
+                  <td>
+                    $ {Math.round(item.price * item.quantity * 100) / 100}
+                  </td>
+                </tr>
+              );
             })}
           </tbody>
           <tfoot>
@@ -40,7 +75,15 @@ const {cart,setCart} = useSharedState()
               <th scope="row" colSpan="3">
                 Total Amount
               </th>
-              <td>23</td>
+              <td>
+                ${" "}
+                {Math.round(
+                  cart.reduce(
+                    (acc, curr) => acc + curr.price * curr.quantity,
+                    0
+                  ) * 100
+                ) / 100}
+              </td>
             </tr>
           </tfoot>
         </table>
