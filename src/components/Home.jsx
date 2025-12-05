@@ -4,12 +4,15 @@ import { ImageCarousel } from "./image-carousel/image-carousel/ImageCarousel";
 import rebarImg from "/src/assets/images/rebar.png";
 import masonryImg from "/src/assets/images/masonry.png";
 import roofingSheetImg from "/src/assets/images/roofing.png";
+import backgroundImg from "/src/assets/images/materials.png"
 
 export function Homepage() {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{
+      '--background-url': `url("${backgroundImg}")`
+    }}>
       <section className={styles.navBar}>
         <span>Logo</span>
         <span>
