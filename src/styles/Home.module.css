@@ -84,7 +84,7 @@ a:hover {
   color: black;
   padding: 5px;
   border-radius: 5px;
-  width: 70ch;
+  width: 40%;
 }
 
 .topic {
@@ -96,7 +96,7 @@ a:hover {
   width: 20px;
 }
 
-.clientName{
+.clientName {
   display: flex;
   justify-content: flex-end;
 }
@@ -117,11 +117,28 @@ button a:active {
   color: #646cff;
 }
 
+@media (max-width: 700px) {
+  .features,
+  .testimonial {
+    width: 100%;
+  }
+  .info {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .headline p {
+    font-size: 1.4rem;
+  }
+  .imageCarousel p {
+    font-size: 1.1rem;
+  }
+}
+
 .content h1 {
   margin: 0;
   position: relative;
   top: 50px;
-  font-size: 5rem;
+  font-size: calc(2rem + 3vw);
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)

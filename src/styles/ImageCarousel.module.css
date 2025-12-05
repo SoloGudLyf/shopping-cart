@@ -1,6 +1,3 @@
-img {
-  width: 20%;
-}
 
 .container {
   display: flex;
@@ -13,7 +10,7 @@ img {
 }
 
 .pictureFrame img {
-  width: 1000px;
+  width: 60vw;
   height: 400px;
 }
 
@@ -50,6 +47,14 @@ img {
 .inactive {
   display: none;
 }
+
+@media (max-width:1130px){
+  .pictureFrame img {
+    width: 65vw;
+    height: 300px;
+  }
+}
+
 
 .fadeIn {
   border-radius: 5px;

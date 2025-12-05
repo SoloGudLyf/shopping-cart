@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { MemoryRouter } from "react-router";
-import userEvent from "@testing-library/user-event";
 import { CartPage } from "../components/cart/Cart";
 import { StateProvider } from "../components/sharedCart";
 
