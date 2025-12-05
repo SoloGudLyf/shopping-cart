@@ -3,8 +3,8 @@ import styles from "../styles/Home.module.css";
 import { ImageCarousel } from "./image-carousel/image-carousel/ImageCarousel";
 
 export function Homepage() {
-  const navigate = useNavigate()
-  
+  const navigate = useNavigate();
+
   return (
     <div className={styles.container}>
       <section className={styles.navBar}>
@@ -22,9 +22,7 @@ export function Homepage() {
             Your trusted source for high-quality steel, timber, cement, and
             construction essentials.
           </p>
-          <button onClick={()=> navigate('/shop')}>
-            Shop All Materials
-          </button>
+          <button onClick={() => navigate("/shop")}>Shop All Materials</button>
         </section>
         <section className={styles.imageCarousel}>
           <p>
@@ -34,19 +32,19 @@ export function Homepage() {
           <ImageCarousel
             imagesArr={[
               {
-                src: "/src/components/image-carousel/image-carousel/images/rebar.png",
+                src: "src/components/image-carousel/image-carousel/images/rebar.png",
                 alt: "Rebar",
               },
               {
-                src: "/src/components/image-carousel/image-carousel/images/timber.png",
+                src: "src/components/image-carousel/image-carousel/images/timber.png",
                 alt: "timber",
               },
               {
-                src: "/src/components/image-carousel/image-carousel/images/masonry.png",
+                src: "src/components/image-carousel/image-carousel/images/masonry.png",
                 alt: "masonry",
               },
               {
-                src: "/src/components/image-carousel/image-carousel/images/roofing.png",
+                src: "src/components/image-carousel/image-carousel/images/roofing.png",
                 alt: "roofing-materials",
               },
             ]}
