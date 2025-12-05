@@ -1,6 +1,9 @@
 import { Link, useNavigate } from "react-router";
 import styles from "../styles/Home.module.css";
 import { ImageCarousel } from "./image-carousel/image-carousel/ImageCarousel";
+import rebarImg from "/src/assets/images/rebar.png";
+import masonryImg from "/src/assets/images/masonry.png";
+import roofingSheetImg from "/src/assets/images/roofing.png";
 
 export function Homepage() {
   const navigate = useNavigate();
@@ -33,7 +36,7 @@ export function Homepage() {
           <ImageCarousel
             imagesArr={[
               {
-                src: "src/assets/images/rebar.png",
+                src: rebarImg,
                 alt: "Rebar",
               },
               {
@@ -41,11 +44,11 @@ export function Homepage() {
                 alt: "timber",
               },
               {
-                src: "src/assets/images/masonry.png",
+                src: masonryImg,
                 alt: "masonry",
               },
               {
-                src: "src/assets/images/roofing.png",
+                src: roofingSheetImg,
                 alt: "roofing-materials",
               },
             ]}
