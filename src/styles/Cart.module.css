@@ -13,6 +13,7 @@ table {
   letter-spacing: 1px;
   font-size: 1.05rem;
   margin: auto;
+  text-align: left;
 }
 
 caption {
@@ -27,9 +28,9 @@ tfoot {
 }
 
 th,
-td {
-  border: 1px solid rgba(0, 0, 0, 0.171);
-  padding: 8px 10px;
+tr,td {
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  padding: 8px 20px;
 }
 
 td:last-of-type {
@@ -66,5 +67,5 @@ table div {
 .quantity {
   display: flex;
   justify-content: space-evenly;
-  border: 0.5px solid rgba(0, 0, 0, 0.151);
+  border:none;
 }

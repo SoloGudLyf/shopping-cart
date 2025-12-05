@@ -38,11 +38,14 @@ export function CartPage() {
         <span>
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
-          <Link to="/cart">Cart  <span className={shopPageStyles.cartSize}>
-                        {cart
-                          .map((item) => item.quantity)
-                          .reduce((acc, curr) => acc + curr, 0)}
-                      </span></Link>
+          <Link to="/cart">
+            Cart{" "}
+            <span className={shopPageStyles.cartSize}>
+              {cart
+                .map((item) => item.quantity)
+                .reduce((acc, curr) => acc + curr, 0)}
+            </span>
+          </Link>
         </span>
       </section>
       <section>
