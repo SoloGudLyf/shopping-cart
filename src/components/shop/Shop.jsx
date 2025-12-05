@@ -1,30 +1,33 @@
 import styles from "/home/gud-lyf/repos/shopping-cart/src/styles/Shop.module.css";
-import { Link } from "react-router";
+import { Link, Outlet } from "react-router";
 import homePageStyles from "/home/gud-lyf/repos/shopping-cart/src/styles/Home.module.css";
 import { products } from "./products";
 import ProductCard from "./productCard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { CartPage } from "../cart/cart";
+import { useSharedState } from "../sharedCart";
 
 export default function Shop() {
-  const [cart, setCart] = useState([]);
+  const {cart, setCart} = useSharedState();
+  
   function updateCart(newItem) {
-    if(cart.length===0) return setCart([newItem])
-      let counter =0
+    if (cart.length === 0) return setCart([newItem]);
+    let counter = 0;
     const newCart = cart.map((item) => {
       if (item.name === newItem.name) {
-        const Item = { ...item, quantity: item.quantity + newItem.quantity };        
+        const Item = { ...item, quantity: item.quantity + newItem.quantity };
         return Item;
       }
-      counter++
+      counter++;
       return item;
     });
 
-    if(counter === cart.length) return setCart([...cart, newItem])
+    if (counter === cart.length) return setCart([...cart, newItem]);
     setCart(newCart);
   }
 
   useEffect(() => {
-    console.log(cart);
+    <CartPage cart={cart} updateCart={updateCart} />;
   }, [cart]);
 
   return (
