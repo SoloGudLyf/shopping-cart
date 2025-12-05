@@ -29,22 +29,23 @@ export function Homepage() {
             Explore Our Core Materials like Steel & Rebar, Lumber & Timber,
             Foundation & Masonry and Roofing & Insulation{" "}
           </p>
+          <img src="../" alt="" />
           <ImageCarousel
             imagesArr={[
               {
-                src: "src/components/image-carousel/image-carousel/images/rebar.png",
+                src: "src/assets/images/rebar.png",
                 alt: "Rebar",
               },
               {
-                src: "src/components/image-carousel/image-carousel/images/timber.png",
+                src: "src/assets/images/timber.png",
                 alt: "timber",
               },
               {
-                src: "src/components/image-carousel/image-carousel/images/masonry.png",
+                src: "src/assets/images/masonry.png",
                 alt: "masonry",
               },
               {
-                src: "src/components/image-carousel/image-carousel/images/roofing.png",
+                src: "src/assets/images/roofing.png",
                 alt: "roofing-materials",
               },
             ]}
