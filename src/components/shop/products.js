@@ -1,15 +1,18 @@
+
+
 export const products = [
   {
     name: `Rebar - Grade 60 (1/2" x 20')`,
     description: "Essential for reinforcing concrete in footings and slabs.",
-    imgSrc: "src/assets/images",
+  
+    imgSrc: "src/components/image-carousel/image-carousel/images/rebar.png",
     imgAlt: "Rebar",
     price: 14.5,
   },
   {
     name: `Standard 8x8x16 Hollow Concrete Block`,
     description: "ASTM C90 compliant. Perfect for structural walls.",
-    imgSrc: "src/assets/images/hollowBlock.png",
+    imgSrc: "src/components/shop/images/hollowBlock.png",
     imgAlt: "Rebar",
     price: 2.85,
   },
