@@ -31,11 +31,9 @@
   border-radius: 5px;
 }
 
-.buttonContainer{
+.buttonContainer {
   text-align: center;
 }
-
-
 
 .container button {
   color: white;
@@ -43,7 +41,7 @@
 }
 
 .container button:hover {
-  background-color: #e05c00;
+  background-color: #ff710c;
 }
 
 .items input {
@@ -87,16 +85,20 @@
   left: 45px;
 }
 
-.items p{
+.items p {
   margin: 2px;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.card h2{
+.card h2 {
   margin: 0;
+}
+
+.topic,label {
+  font-weight: bold;
 }
