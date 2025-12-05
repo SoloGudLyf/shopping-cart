@@ -1,8 +1,8 @@
 import { Link } from "react-router";
 import { useSharedState } from "../sharedCart";
-import styles from "/home/gud-lyf/repos/shopping-cart/src/styles/Cart.module.css";
-import homePageStyles from "/home/gud-lyf/repos/shopping-cart/src/styles/Home.module.css";
-import shopPageStyles from "/home/gud-lyf/repos/shopping-cart/src/styles/Shop.module.css";
+import styles from "/src/styles/Cart.module.css";
+import homePageStyles from "/src/styles/Home.module.css";
+import shopPageStyles from "/src/styles/Shop.module.css";
 
 export function CartPage() {
   const { cart, setCart } = useSharedState();

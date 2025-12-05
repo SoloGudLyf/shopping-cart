@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "/home/gud-lyf/repos/shopping-cart/src/styles/Shop.module.css";
+import styles from "/src/styles/Shop.module.css";
 
 export default function ProductCard({ item, id, updateCart }) {
   const [itemSize, setItemSize] = useState(1);
@@ -20,7 +20,7 @@ export default function ProductCard({ item, id, updateCart }) {
         <div>
           <p>
             <span className={styles.topic}>Price: </span>
-            {item.priceDesc || "$ "+item.price}
+            {item.priceDesc || "$ " + item.price}
           </p>
           {(item.bulkPriceDesc || item.bulkPrice) && (
             <p>

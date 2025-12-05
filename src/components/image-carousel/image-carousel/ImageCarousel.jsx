@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "/home/gud-lyf/repos/shopping-cart/src/styles/ImageCarousel.module.css";
+import styles from "/src/styles/ImageCarousel.module.css";
 
 export function ImageCarousel({ imagesArr }) {
   const [currIndex, setCurrIndex] = useState(0);

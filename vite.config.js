@@ -7,6 +7,6 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: '/home/gud-lyf/repos/shopping-cart/src/tests/setup.js',
+    setupFiles: "/src/tests/setup.js",
   },
 });

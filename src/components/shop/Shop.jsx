@@ -1,6 +1,6 @@
-import styles from "/home/gud-lyf/repos/shopping-cart/src/styles/Shop.module.css";
+import styles from "/src/styles/Shop.module.css";
 import { Link, Outlet } from "react-router";
-import homePageStyles from "/home/gud-lyf/repos/shopping-cart/src/styles/Home.module.css";
+import homePageStyles from "/src/styles/Home.module.css";
 import { products } from "./products";
 import ProductCard from "./productCard";
 import { useEffect } from "react";
